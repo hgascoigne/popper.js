@@ -1026,6 +1026,7 @@
      */
     function getStyleComputedProperty(element, property) {
         // NOTE: 1 DOM access here
+        if (element) return null
         var css = root.getComputedStyle(element, null);
         return css[property];
     }
